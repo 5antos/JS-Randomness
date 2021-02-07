@@ -1,4 +1,5 @@
 /**
+ * @author 5antos#4876
  * @param {Number} current Current progress of the bar
  * @param {Number} total The value of the progress when the bar is totally filled
  * @param {Number} barSize Fixed bar size
