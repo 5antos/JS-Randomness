@@ -2,7 +2,7 @@
  * @author 5antos#4876
  * @note Uppercase and lowercase letters are considered different characters
  * @param {String} string Input string to remove duplicated characters in a row
- * @param {Boolean} bool Whether or not to allow two letters in a row. Useful for some words, like 'really', 'see', 'good', etc.
+ * @param {Boolean} [bool=false] Whether or not to allow two letters in a row. Useful for some words, like 'really', 'see', 'good', etc.
  * @returns {String} String without duplicated characters in a row
  */
 
