@@ -8,9 +8,8 @@
 
 function progressBar(current, total, barSize) {
   const progress = Math.round((barSize*current)/total)
-  const emptyProgress = barSize - progress
 
-  return `▮`.repeat(progress) + `▯`.repeat(emptyProgress)
+  return `▮`.repeat(progress) + `▯`.repeat(barSize-progress)
 }
 
 
