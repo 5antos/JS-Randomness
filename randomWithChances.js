@@ -23,6 +23,6 @@ getRandom([
 ])
 
 getRandom([
-  { face: 'Heads', weight: 50 },
-  { face: 'Tails', weight: 50 }
+  { side: 'Heads', weight: 50 },
+  { side: 'Tails', weight: 50 }
 ])
