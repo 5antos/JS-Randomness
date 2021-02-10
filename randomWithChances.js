@@ -8,9 +8,8 @@
 function getRandom(array) {
   const auxArray = Array.from(array)
   auxArray.reduce((acc, curr, i, a) => a[i] = acc + curr.weight, 0)
-  const randomChance = Math.random() * auxArray[auxArray.length-1]
 
-  return array[auxArray.findIndex(w => w > randomChance)]
+  return array[auxArray.findIndex(w => w > Math.random()*auxArray[auxArray.length-1])]
 }
 
 
