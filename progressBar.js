@@ -10,10 +10,7 @@ function progressBar(current, total, barSize) {
   const progress = Math.round((barSize*current)/total)
   const emptyProgress = barSize - progress
 
-  const filled = `▮`.repeat(progress)
-  const notFilled = `▯`.repeat(emptyProgress)
-
-  return filled + notFilled
+  return `▮`.repeat(progress) + `▯`.repeat(emptyProgress)
 }
 
 
