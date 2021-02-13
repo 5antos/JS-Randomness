@@ -1,9 +1,9 @@
 /**
  * @author 5antos#4876
- * @param {Number} current Current progress of the bar
- * @param {Number} total The value of the progress when the bar is totally filled
- * @param {Number} barSize Fixed bar size
- * @returns {String} Progress bar
+ * @param {number} current Current progress of the bar
+ * @param {number} total The value of the progress when the bar is totally filled
+ * @param {number} barSize Fixed bar size
+ * @returns {string} Progress bar
  */
 
 function progressBar(current, total, barSize) {
