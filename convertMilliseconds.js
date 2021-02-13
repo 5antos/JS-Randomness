@@ -1,7 +1,7 @@
 /**
  * @author 5antos#4876
- * @param {Number} ms Time value in milliseconds
- * @returns {Object} Object with the converted time in days, hours, minutes and seconds
+ * @param {number} ms Time value in milliseconds
+ * @returns {object} Object with the converted time in days, hours, minutes and seconds
  */
 
 function convertMilliseconds(ms) {
