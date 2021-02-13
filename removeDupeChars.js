@@ -1,9 +1,9 @@
 /**
  * @author 5antos#4876
  * @note Uppercase and lowercase letters are considered different characters
- * @param {String} string Input string to remove duplicated characters in a row
- * @param {Boolean} [bool=false] Whether or not to allow two letters in a row. Useful for some words, like 'really', 'see', 'good', etc.
- * @returns {String} String without duplicated characters in a row
+ * @param {string} string Input string to remove duplicated characters in a row
+ * @param {boolean} [bool=false] Whether or not to allow two letters in a row. Useful for some words, like 'really', 'see', 'good', etc.
+ * @returns {string} String without duplicated characters in a row
  */
 
 function removeDupeChars(string, bool=false) {
