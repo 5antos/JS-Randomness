@@ -1,6 +1,6 @@
 /**
  * @author 5antos#4876
- * @param {Object[]} array Array with objects with a key named 'weight', representing the chance of that element to occur
+ * @param {object[]} array Array with objects with a key named 'weight', representing the chance of that element to occur
  * @note An element with a weight value of zero (0) will never occur
  * @returns {any} Random element from the provided array, based on the different elements' chances
  */
