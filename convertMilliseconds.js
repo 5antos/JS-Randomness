@@ -10,7 +10,7 @@ function convertMilliseconds(ms) {
   const hours = ~~(minutes/60)
   const days = ~~(hours/24)
 
-  return { days, hours: ~~(hours%24), minutes: ~~(minutes%60), seconds: ~~(seconds%60) }
+  return { days, hours: hours%24, minutes: minutes%60, seconds: seconds%60 }
 }
 
 
