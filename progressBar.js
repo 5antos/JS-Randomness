@@ -12,9 +12,19 @@ function progressBar(current, total, barSize) {
   return '▮'.repeat(progress) + '▯'.repeat(barSize-progress)
 }
 
+function progressBarEnhanced(current, total, barSize) {
+  const progress = Math.round((barSize*current)/total)
+
+  return '—'.repeat(progress > 0 ? progress-1 : progress) + '•' + '-'.repeat(barSize-progress)
+}
+
 
 // Example Outputs:
 
-progressBar(50, 100, 10) // ▮▮▮▮▮▯▯▯▯▯
-progressBar(100, 1000, 10) // ▮▯▯▯▯▯▯▯▯▯
-progressBar(20, 20, 5) // ▮▮▮▮▮
+progressBar(50, 100, 10)              // ▮▮▮▮▮▯▯▯▯▯
+progressBar(100, 1000, 10)            // ▮▯▯▯▯▯▯▯▯▯
+progressBar(20, 20, 5)                // ▮▮▮▮▮
+
+progressBarEnhanced(50, 100, 10)      // ————•-----
+progressBarEnhanced(100, 1000, 10)    // •---------
+progressBarEnhanced(20, 20, 5)        // ————•
