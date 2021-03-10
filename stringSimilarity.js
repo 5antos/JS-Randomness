@@ -1,5 +1,5 @@
 /**
- * This method uses the Jaro similarity algorithm to measure the similarity between two strings (characters, words or phrases).
+ * This method uses the Jaro similarity algorithm to measure the similarity between two strings (words or phrases).
  * Adapted from https://www.geeksforgeeks.org/jaro-and-jaro-winkler-similarity/
  * @author 5antos#4876
  * @param {string} str1 First string
