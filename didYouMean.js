@@ -16,6 +16,6 @@ function didYouMean(str, array, threshold=60) {
 
 // Example Outputs:
 
-console.log(didYouMean('hekp', ['goodbye', 'hello', 'help'])) // help
-console.log(didYouMean('dodgeball', ['pencil', 'avocado', 'supermarket'])) // null
-console.log(didYouMean('intsagrm', ['facebook', 'instagram', 'twitter', 'linkedin', 'github'])) // instagram
+didYouMean('hekp', ['goodbye', 'hello', 'help']) // help
+didYouMean('dodgeball', ['pencil', 'avocado', 'supermarket']) // null
+didYouMean('intsagrm', ['facebook', 'instagram', 'twitter', 'linkedin', 'github']) // instagram
