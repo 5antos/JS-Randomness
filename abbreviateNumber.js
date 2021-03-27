@@ -12,7 +12,7 @@
   const divDigits = length-(lengthThird || lengthThird+3)
   const calc = ''+(number/Math.pow(10, divDigits)).toFixed(precision)
 
-  return number < 1000 ? ''+number : (calc.indexOf('.') === length-3 ? calc.replace(/\.00/, '') : calc)+suffs[divDigits]
+  return number < 1000 ? ''+number : (calc.indexOf('.') === calc.length-3 ? calc.replace(/\.00/, '') : calc)+suffs[divDigits]
 }
 
 
