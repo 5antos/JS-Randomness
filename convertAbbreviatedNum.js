@@ -9,9 +9,7 @@ function convertAbbreviatedNum(abbreviation) {
   const unit = abbreviation.substr(-1)
   const zeros = { k:1e3, M:1e6, G:1e9, T:1e12 } // k: thousand, M: million, G: billion, T: trillion
 
-  if (!zeros[unit]) return parseFloat(abbreviation)
-
-  return number*zeros[unit]
+  return !zeros[unit] ? parseFloat(abbreviation) : number*zeros[unit]
 }
 
 
