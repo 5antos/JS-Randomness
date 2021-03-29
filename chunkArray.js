@@ -6,6 +6,14 @@
  */
 
 function chunkArray(array, count) {
+	const newArr = []
+	for (var i = 0; i < array.length; i+=count)
+    newArr[i/count] = array.slice(i, i+count)
+  return newArr
+}
+
+// One-line version ("prettier" but slower)
+function chunkArray(array, count) {
   return array.reduce((acc, _, i, arr) => !(i%count) ? [...acc, arr.slice(i, i+count)] : acc, [])
 }
 
