@@ -6,7 +6,7 @@
  */
 
  function chunkArray(array, count) {
-  return array.reduce((acc, curr, i, arr) => !(i%count) ? [...acc, arr.slice(i, i+count)] : acc, [])
+  return array.reduce((acc, _, i, arr) => !(i%count) ? [...acc, arr.slice(i, i+count)] : acc, [])
 }
 
 
