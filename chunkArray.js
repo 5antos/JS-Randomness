@@ -5,7 +5,7 @@
  * @returns {any[][]} Chunked array
  */
 
- function chunkArray(array, count) {
+function chunkArray(array, count) {
   return array.reduce((acc, _, i, arr) => !(i%count) ? [...acc, arr.slice(i, i+count)] : acc, [])
 }
 
