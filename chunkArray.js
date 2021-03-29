@@ -6,8 +6,8 @@
  */
 
 function chunkArray(array, count) {
-	const newArr = []
-	for (var i = 0; i < array.length; i+=count)
+  const newArr = []
+  for (var i = 0; i < array.length; i+=count)
     newArr[i/count] = array.slice(i, i+count)
   return newArr
 }
