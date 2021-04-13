@@ -23,7 +23,7 @@ function _reduce(counter) {
     counter = counter.substring(1, counter.length-1)
   }
   result += counter
-  return result<=100 ? result : _reduce(result)
+  return result <= 100 ? result : _reduce(result)
 }
 
 
