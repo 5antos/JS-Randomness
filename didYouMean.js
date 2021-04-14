@@ -2,7 +2,7 @@
  * @author 5antos#4876
  * @param {string} str Input string
  * @param {string[]} array Array of strings corresponding to potential matches
- * @param {number} threshold This function will only consider strings with similarity values of <threshold>% or more. Defaults to 60% (recommended)
+ * @param {number} [threshold=60] This function will only consider strings with similarity values of <threshold>% or more. Defaults to 60% (recommended)
  * @returns {string|null} String most similar to the input string. Returns null if no string is found according to the threshold value
  */
 
