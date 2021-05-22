@@ -37,8 +37,8 @@ function toFraction(num, epsilon=1e-7) {
 
 // Example Outputs:
 
-console.log(toFraction(1.25))             // 5/4
-console.log(toFraction(-1.25))            // -5/4
-console.log(toFraction(1.125))            // 9/8
-console.log(toFraction(Math.PI))          // 103993/33102
-console.log(toFraction(Math.PI, 1e-10))   // 312689/99532
+toFraction(1.25)             // 5/4
+toFraction(-1.25)            // -5/4
+toFraction(1.125)            // 9/8
+toFraction(Math.PI)          // 103993/33102
+toFraction(Math.PI, 1e-10)   // 312689/99532
