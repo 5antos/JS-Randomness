@@ -12,10 +12,7 @@ function extendedSetTimeout(callback, ms) {
   const biggestInt = (2**31)-1
   const max = ms > biggestInt ? biggestInt : ms
 
-  setTimeout(async () => {
-    if (ms > max) extendedSetTimeout(callback, ms - max)
-    else callback()
-  }, max)
+  setTimeout(() => ms > max ? extendedSetTimeout(callback, ms - max) : callback(), max)
 }
 
 
