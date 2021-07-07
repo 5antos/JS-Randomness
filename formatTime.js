@@ -12,9 +12,23 @@ function formatTime(time, format, twoDigits=true) {
   return format.replace(/dd|hh|mm|ss/g, match => time[formats[match]].toString().padStart(twoDigits ? 2 : 0, '0'))
 }
 
+function autoFormatTime(time) {
+  const onlyCountable = Object.fromEntries(Object.entries(time).filter(e => !!e[1]))
+
+  return Object
+    .entries(onlyCountable)
+    .map(e => ([e[0].slice(0, -1).padEnd(e[1] > 1 ? e[0].length : 0, 's'), e[1]]))
+    .map((e,i,arr) => i === arr.length-1 ? `and ${e[1]} ${e[0]}` : i === arr.length-2 ? `${e[1]} ${e[0]}` : `${e[1]} ${e[0]},`)
+    .join(' ')
+}
+
 
 // Example Outputs:
 
-formatTime({ days: 0, hours: 2, minutes: 39, seconds: 48 }, 'dd days, hh hours, mm minutes and ss seconds', false) // 0 days, 2 hours, 39 minutes and 48 seconds
+formatTime({ days: 0, hours: 2, minutes: 39, seconds: 48 }, 'dd day(s), hh hour(s), mm minute(s), ss second(s)', false) // 0 day(s), 2 hour(s), 39 minute(s), 48 second(s)
 formatTime(convertMilliseconds(1020000), 'dd:hh:mm:ss', false) // 0:0:17:0
-formatTime(convertMilliseconds(74000), 'dd:hh:mm:ss') // 00:00:01:14
+formatTime(convertMilliseconds(74000), 'hh:mm:ss') // 00:01:14
+
+autoFormatTime({ days: 0, hours: 1, minutes: 30, seconds: 0 }) // 1 hour and 30 minutes
+autoFormatTime({ days: 1, hours: 5, minutes: 1, seconds: 30 }) // 1 day, 5 hours, 1 minute and 30 seconds
+autoFormatTime({ days: 14, hours: 8, minutes: 0, seconds: 1 }) // 14 days, 8 hours and 1 second
