@@ -18,5 +18,5 @@ function extendedSetTimeout(callback, ms) {
 
 // Example Outputs (extendedSetTimeout VS setTimeout):
 
-extendedSetTimeout(() => console.log('5 years later!'), 1.5778463e11) // [👍] Outputs '5 years later!' after 5 years... if your application remained online the entire time
+extendedSetTimeout(() => console.log('5 years later!'), 1.5778463e11) // [👍] Outputs '5 years later!' after 5 years... if your application remains online the entire time
 setTimeout(() => console.log('5 years later?'),         1.5778463e11) // [👎] Outputs a warning because the provided duration exceeds the maximum allowed duration
