@@ -33,4 +33,4 @@ formatTime(convertMilliseconds(74000), 'hh:mm:ss') // 00:01:14
 autoFormatTime({ days: 0, hours: 1, minutes: 30, seconds: 0 }) // 1 hour and 30 minutes
 autoFormatTime(convertMilliseconds(104_490_000)) // 1 day, 5 hours, 1 minute and 30 seconds
 autoFormatTime({ days: 14, hours: 8, minutes: 0, seconds: 1 }) // 14 days, 8 hours and 1 second
-autoFormatTime({ days: 0, hours: 0, minutes: 0, seconds: 0 }) // 0 seconds
+autoFormatTime(convertMilliseconds(0)) // 0 seconds
