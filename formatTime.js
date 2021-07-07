@@ -18,8 +18,9 @@ function autoFormatTime(time) {
   return Object
     .entries(onlyCountable)
     .map(e => ([e[0].slice(0, -1).padEnd(e[1] > 1 ? e[0].length : 0, 's'), e[1]]))
-    .map((e,i,arr) => i === arr.length-1 ? `and ${e[1]} ${e[0]}` : i === arr.length-2 ? `${e[1]} ${e[0]}` : `${e[1]} ${e[0]},`)
+    .map((e,i,arr) => (i === arr.length-1 && arr.length > 1) ? `and ${e[1]} ${e[0]}` : (i === arr.length-2 || arr.length === 1) ? `${e[1]} ${e[0]}` : `${e[1]} ${e[0]},`)
     .join(' ')
+    || '0 seconds'
 }
 
 
@@ -32,3 +33,4 @@ formatTime(convertMilliseconds(74000), 'hh:mm:ss') // 00:01:14
 autoFormatTime({ days: 0, hours: 1, minutes: 30, seconds: 0 }) // 1 hour and 30 minutes
 autoFormatTime(convertMilliseconds(104_490_000)) // 1 day, 5 hours, 1 minute and 30 seconds
 autoFormatTime({ days: 14, hours: 8, minutes: 0, seconds: 1 }) // 14 days, 8 hours and 1 second
+autoFormatTime({ days: 0, hours: 0, minutes: 0, seconds: 0 }) // 0 seconds
