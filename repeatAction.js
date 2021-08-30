@@ -10,7 +10,7 @@ function repeatAction(amount, callback, time=0) {
   if (amount--) callback()
   if (amount > 0) return setTimeout(() => repeatAction(amount, callback, time), time)
   
-  // Section for code to be executed when the action has repeated the provided amount of times ↷
+  // Section for code to be executed when the action has repeated the provided amount of times
   console.log('You found a bone!')
 }
 
