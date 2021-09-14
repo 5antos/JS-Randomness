@@ -6,7 +6,7 @@
  * @returns {number} Love percentage
  */
 
- function getLovePercentage(name1, name2) {
+function getLovePercentage(name1, name2) {
   let concat = [name1, name2].sort((a,b) => a.localeCompare(b)).join('').toLowerCase()
   let counter = ''
   while(concat.length) {
