@@ -12,9 +12,9 @@ function abbreviateNumber(number, precision=2) {
 
 // Example Outputs:
 
-console.log(abbreviateNumber(30600000))                  // 30.6M
-console.log(abbreviateNumber(500))                       // 500
-console.log(abbreviateNumber(175050))                    // 175.05K
-console.log(abbreviateNumber(5006500000))               // 5.01B
-console.log(abbreviateNumber(5006600000, 3))   // 5.007B
-console.log(abbreviateNumber(15000))                     // 15k
+abbreviateNumber(30600000)                  // 30.60M
+abbreviateNumber(500)                       // 500
+abbreviateNumber(175050)                    // 175.05k
+abbreviateNumber(5006500000)               // 5.01G
+abbreviateNumber(5006600000, 3)   // 5.007G
+abbreviateNumber(15000)                     // 15k
