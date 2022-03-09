@@ -28,9 +28,9 @@ function autoFormatTime(time) {
 
 // Example Outputs:
 
-formatTime(convertMilliseconds(1020000)) // 17:00
-formatTime(convertMilliseconds(6350676)) // 01:45:50
-formatTime(convertMilliseconds(0)) // 00:00
+formatTime(convertMilliseconds(1_020_000)) // 17:00
+formatTime(convertMilliseconds(6_350_676)) // 01:45:50
+formatTime(convertMilliseconds(5_278_988_000), 'dd days, hh:mm:ss') // 61 days, 02:23:08
 formatTime({ days: 0, hours: 8, minutes: 0, seconds: 15 }) // 08:00:15
 
 autoFormatTime(convertMilliseconds(104_490_000)) // 1 day, 5 hours, 1 minute and 30 seconds
