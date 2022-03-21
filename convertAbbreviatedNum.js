@@ -1,6 +1,6 @@
 /**
  * @author 5antos#4876
- * @param {string} abbreviation Abbreviated number, such as 15k or 1.5M, for example. Returns the number itself if provided without any unit
+ * @param {string} abbreviation Abbreviated number, such as 15K or 1.5M, for example. Returns the number itself if provided without any unit
  * @returns {number} Converted number
  */
 
