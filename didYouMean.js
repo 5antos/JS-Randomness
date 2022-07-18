@@ -1,4 +1,6 @@
 /**
+ * The checkSimilarity function can be found in this repository (https://github.com/5antos/JS-Randomness/blob/master/stringSimilarity.js).
+ * You can also write your own checkSimilarity function, just make sure that the function's return type should be a number between 0 and 1
  * @author 5antos#4876
  * @param {string} str Input string
  * @param {string[]} array Array of strings corresponding to potential matches
@@ -8,7 +10,7 @@
 
 function didYouMean(str, array, threshold=60) {
   return array
-    .map(e => { return {e, v: checkSimilarity(str, e)} }) // checkSimilarity function can be found in this repository
+    .map(e => { return {e, v: checkSimilarity(str, e)} })
     .filter(({v}) => v >= threshold/100)
     .reduce((_, curr, i, arr) => arr[i].v > curr ? arr[i].v : curr.e, null)
 }
