@@ -9,10 +9,11 @@
  */
 
 function didYouMean(str, array, threshold=60) {
-  return array
+  const acceptable = array
     .map(e => { return {e, v: checkSimilarity(str, e)} })
     .filter(({v}) => v >= threshold/100)
-    .reduce((acc, curr) => curr.v > acc.v ? curr : acc)
+
+  return !acceptable.length ? null : acceptable.reduce((acc, curr) => curr.v > acc.v ? curr : acc).e
 }
 
 
