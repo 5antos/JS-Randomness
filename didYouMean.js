@@ -12,7 +12,7 @@ function didYouMean(str, array, threshold=60) {
   return array
     .map(e => { return {e, v: checkSimilarity(str, e)} })
     .filter(({v}) => v >= threshold/100)
-    .reduce((_, curr, i, arr) => arr[i].v > curr ? arr[i].v : curr.e, null)
+    .reduce((acc, curr) => curr.v > acc.v ? curr : acc)
 }
 
 
