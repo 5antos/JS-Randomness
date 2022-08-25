@@ -2,7 +2,6 @@
  * @author 5antos#4876
  * @param {object} time Object returned from the convertMilliseconds function (available in this repository) or equivalent
  * @param {string} [format="dd:hh:mm:ss"] Format to display
- * @param {boolean} [twoDigits=true] Whether or not to add zeros on the left of a number if it's lower than 10
  * @returns {string} Formatted string
  */
 
